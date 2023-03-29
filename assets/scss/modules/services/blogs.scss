@@ -1,0 +1,29 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+// TODO:: Make a reusable article section component
+section.blogs.blog-service {
+  background-color: $blue-0;
+  padding: 5rem;
+
+  @media (max-width: $md-screen-min) {
+    padding: 4rem 2rem;
+  }
+
+  h2 {
+    @include color($white-0);
+  }
+
+  .more-blogs {
+    a[role="button"] {
+      background-color: $white-0;
+      @include color($blue-0);
+
+      &:hover {
+        border: 1px solid $white-0;
+        @include color($white-0);
+        background-color: transparent;
+      }
+    }
+  }
+}

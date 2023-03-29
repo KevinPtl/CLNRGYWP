@@ -1,0 +1,101 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+.hero {
+  height: 90vh;
+  width: 100%;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  @include box-sizing(border-box);
+
+  @media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+    height: 150vh;
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: $xxl-screen-min;
+    height: 100%;
+    margin: auto;
+    padding: 20rem 0;
+    align-items: center;
+    @include box-sizing(border-box);
+
+    @media (max-width: $md-screen-min) {
+      padding: 10rem 0;
+    }
+
+    .hero-text {
+      z-index: 1;
+
+      hgroup {
+        h3 {
+          margin-bottom: 1rem;
+          @include color($green-1);
+
+          @media (max-width: $xxl-screen-min) {
+            font-size: $font-size-xlarge;
+            line-height: $font-size-xlarge;
+          }
+
+          @media (max-width: $md-screen-min) {
+            font-size: $font-size-large;
+            line-height: $font-size-large;
+          }
+        }
+
+        h1 {
+          @include color($black-1);
+
+          @media (max-width: $xxl-screen-min) {
+            font-size: $font-size-7xlarge;
+            line-height: $font-size-7xlarge;
+          }
+
+          @media (max-width: 991px) {
+            font-size: $font-size-6xlarge;
+            line-height: $font-size-6xlarge;
+          }
+
+          @media (max-width: $md-screen-min) {
+            font-size: $font-size-4xlarge;
+            line-height: $font-size-4xlarge;
+          }
+        }
+      }
+
+      a[role="button"] {
+        width: 220px;
+        //font-family: $nunito-bold;
+        font-family: $nunito;
+        font-weight: 700;
+        margin: 2rem 0;
+      }
+    }
+
+    picture {
+      position: absolute;
+
+      @media (max-width: 991px) {
+        height: 100%;
+      }
+
+      img {
+        width: 108%;
+
+        @media (max-width: 991px) {
+          display: flex;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.6;
+        }
+
+        @media (max-width: $md-screen-min) {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}

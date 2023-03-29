@@ -1,0 +1,80 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+section.service-others {
+  padding: 10rem 5rem;
+
+  @media (max-width: $md-screen-min) {
+    padding: 4rem 2rem;
+  }
+
+  h2.title {
+    @include color($blue-0);
+    margin-bottom: 10rem;
+    text-align: center;
+
+    @media (max-width: $xl-screen-min) {
+      font-size: $font-size-4xlarge;
+    }
+
+    @media (max-width: $md-screen-min) {
+      font-size: $font-size-3xlarge;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: $lg-screen-min) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      height: 320px;
+      align-items: center;
+      padding: 0 5rem;
+      @include box-sizing(border-box);
+
+      @media (max-width: $lg-screen-min) {
+        padding: 0;
+        width: 100%;
+      }
+
+      &:first-child {
+        border-right: 1px solid $blue-0;
+
+        @media (max-width: $lg-screen-min) {
+          border-right: none;
+        }
+      }
+
+      &:last-child {
+        border-left: 1px solid $blue-0;
+
+        @media (max-width: $lg-screen-min) {
+          border-left: none;
+        }
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h2 {
+        font-size: $font-size-3xlarge;
+        margin: 2rem 0;
+      }
+
+      a[role="button"] {
+        width: 220px;
+      }
+    }
+  }
+}

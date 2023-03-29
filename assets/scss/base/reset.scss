@@ -1,0 +1,36 @@
+@import "./../abstracts/vars.scss";
+@import "./mixins.scss";
+
+:root {
+  font-size: 62.5%;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  all: unset;
+}
+
+html,
+body {
+  font-family: $nunito, Arial, sans-serif;
+  font-size: $font-size-small;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  @include color($black-1);
+
+  &.menu-open,
+  &.search-open {
+    overflow: hidden;
+  }
+}

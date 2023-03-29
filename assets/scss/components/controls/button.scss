@@ -1,0 +1,54 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+button,
+a[role="button"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 1em;
+  font-size: $font-size-small;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  @include color($white-0);
+  @include box-sizing(border-box);
+
+  &.primary {
+    background-color: $blue-0;
+    border: 1px solid $blue-0;
+    @include transition(background-color 0.2s ease-out);
+
+    &:hover {
+      background-color: $white-0;
+      @include color($blue-0);
+    }
+  }
+
+  &.transparent {
+    border: 1px solid $white-0;
+    background-color: transparent;
+    @include transition(background-color 0.2s ease-out);
+
+    &:hover {
+      background-color: $white-0;
+      @include color($blue-0);
+    }
+  }
+
+  &.secondary {
+    border: 1px solid $blue-0;
+    background-color: $white-0;
+    @include color($blue-0);
+
+    @include transition(background-color 0.2s ease-out);
+
+    &:hover {
+      border: 1px solid $blue-0;
+      background-color: $blue-0;
+      @include color($white-0);
+    }
+  }
+}

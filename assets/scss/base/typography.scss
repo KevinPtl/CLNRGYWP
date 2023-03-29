@@ -1,0 +1,68 @@
+@import "./../abstracts/vars.scss";
+@import "./../base/mixins.scss";
+
+h1 {
+  display: block;
+  text-transform: uppercase;
+  font-size: $font-size-9xlarge;
+  line-height: $font-size-9xlarge;
+  //font-family: $nunito-black;
+  font-family: $nunito;
+  font-weight: 900;
+}
+
+h2 {
+  display: block;
+  text-transform: uppercase;
+  //font-family: $nunito-black;
+  font-family: $nunito;
+  font-weight: 900;
+  font-size: $font-size-4xlarge;
+}
+
+h3 {
+  display: block;
+  //font-family: $nunito-semibold;
+  font-family: $nunito;
+  font-weight: 600;
+  font-size: $font-size-3xlarge;
+  text-transform: uppercase;
+}
+
+h4 {
+  display: block;
+  //font-family: $nunito-bold;
+  font-family: $nunito;
+  font-weight: 700;
+  font-size: $font-size-large;
+  text-transform: uppercase;
+}
+
+h5 {
+  display: block;
+  //font-family: $nunito-extrabold;
+  font-family: $nunito;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h6 {
+  display: block;
+  font-family: $nunito;
+  text-transform: uppercase;
+  font-size: $font-size-large;
+}
+
+p {
+  display: block;
+  line-height: 2;
+}
+
+p a {
+  display: inline;
+  @include color($green-0);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

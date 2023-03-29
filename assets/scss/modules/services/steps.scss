@@ -1,0 +1,106 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+section.step-service {
+  background-color: $white-3;
+  padding: 10rem 5rem;
+
+  @media (max-width: $md-screen-min) {
+    padding: 4rem 2rem;
+  }
+
+  h2.title {
+    @include color($blue-0);
+    margin-bottom: 10rem;
+    text-align: center;
+
+    @media (max-width: $xl-screen-min) {
+      font-size: $font-size-4xlarge;
+    }
+
+    @media (max-width: $md-screen-min) {
+      font-size: $font-size-3xlarge;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .content {
+    display: grid;
+    max-width: $xl-screen-min;
+    margin: auto;
+
+    @media (max-width: $lg-screen-min) {
+      place-content: center;
+    }
+
+    .row {
+      display: flex;
+      max-width: 525px;
+      margin-bottom: 5rem;
+      justify-self: flex-start;
+
+      @media (max-width: $md-screen-min) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &:nth-child(even) {
+        justify-self: flex-end;
+
+        @media (max-width: $lg-screen-min) {
+          justify-self: flex-start;
+        }
+      }
+
+      .left {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 3rem;
+
+        .container {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 100px;
+
+          @media (max-width: $md-screen-min) {
+            width: 75px;
+          }
+
+          span.step {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            font-size: $font-size-8xlarge;
+            font-family: $shadows;
+            @include color($blue-0);
+
+            @media (max-width: $md-screen-min) {
+              font-size: $font-size-5xlarge;
+            }
+          }
+        }
+      }
+
+      .right {
+        padding-left: 3rem;
+        @include box-sizing(border-box);
+
+        @media (max-width: $md-screen-min) {
+          padding-left: 0;
+          text-align: center;
+        }
+
+        h2 {
+          font-size: $font-size-large;
+          //font-family: $nunito-bold;
+          font-family: $nunito;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

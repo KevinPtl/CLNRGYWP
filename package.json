@@ -1,0 +1,20 @@
+{
+  "name": "clnrgy",
+  "version": "1.0.0",
+  "description": "Personal Training and Online Coaching  | Health and Fitness Goals",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start",
+    "compile:sass": "node-sass assets/scss/style.scss build/index.css -w"
+  },
+  "author": "Kevin Patel",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "@wordpress/scripts": "^24.3.0",
+    "node-sass": "^7.0.3"
+  }
+}

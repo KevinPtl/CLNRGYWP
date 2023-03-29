@@ -1,0 +1,28 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+section.contact-form .contact-info {
+  max-width: 768px;
+  margin: auto;
+
+  h2 {
+    @include color($blue-0);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: $font-size-4xlarge;
+
+    @media (max-width: $sm-screen-min) {
+      font-size: $font-size-3xlarge;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+
+  ul.social-media-list {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+  }
+}

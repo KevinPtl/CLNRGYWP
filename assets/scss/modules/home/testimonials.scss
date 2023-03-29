@@ -1,0 +1,210 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+section.testimonials {
+  h2 {
+    //font-family: $nunito-extrabold;
+    font-family: $nunito;
+    font-weight: 800;
+    text-align: center;
+    padding: 6rem 0;
+    max-width: $md-screen-min;
+    line-height: 1.4;
+    margin: auto;
+    @include color($blue-0);
+    @include box-sizing(border-box);
+
+    @media (max-width: $lg-screen-min) {
+      padding: 3rem 0;
+      font-size: $font-size-2xlarge;
+      max-width: 400px;
+    }
+
+    span {
+      @include color($green-1);
+    }
+  }
+
+  .wrapper.testimonial-slider {
+    position: relative;
+    overflow-x: hidden;
+    padding: 10rem 0;
+    @include box-sizing(border-box);
+
+    @media (max-width: $lg-screen-min) {
+      padding: 0 0 4rem 0;
+    }
+
+    picture.background {
+      display: block;
+
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: contain;
+        z-index: -1;
+        top: 0;
+        right: -10%;
+        opacity: 0.75;
+
+        @media (max-width: $lg-screen-min) {
+          object-fit: cover;
+          opacity: 0.25;
+        }
+      }
+    }
+
+    .testimonial-slider__track {
+      position: relative;
+
+      .arrows {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        margin: 1rem auto;
+        justify-content: flex-end;
+
+        @media (max-width: 991px) {
+          max-width: $lg-screen-min;
+        }
+
+        @media (max-width: $lg-screen-min) {
+          justify-content: center;
+        }
+
+        button {
+          background-color: $blue-0;
+          width: 40px;
+          height: 40px;
+          border-radius: 40px;
+          border: 1px solid $blue-0;
+          margin: 0 0.5rem;
+          @include transition(background-color 0.3s ease);
+
+          &:hover {
+            background-color: $white-0;
+            @include color($blue-0);
+          }
+        }
+      }
+    }
+
+    .testimonial-slider__slide .content {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+
+      @media (max-width: 991px) {
+        max-width: $lg-screen-min;
+      }
+
+      @media (max-width: $lg-screen-min) {
+        justify-content: center;
+      }
+
+      .left {
+        width: 500px;
+        min-width: 500px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom: 2rem;
+        background-color: $white-3;
+        @include box-sizing(border-box);
+
+        @media (max-width: 991px) {
+          width: 50%;
+          min-width: 50%;
+          padding: 2rem;
+        }
+
+        @media (max-width: $lg-screen-min) {
+          max-width: 500px;
+          width: 100%;
+          background-color: transparent;
+        }
+
+        picture {
+          display: block;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 calc(40% - 10px);
+        white-space: initial;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom: 2rem;
+        background-color: $white-3;
+        @include box-sizing(border-box);
+
+        @media (max-width: 991px) {
+          padding: 2rem;
+        }
+
+        @media (max-width: $lg-screen-min) {
+          display: none;
+        }
+
+        span.icon {
+          display: block;
+          margin: 2rem 0;
+          @include color($green-1);
+        }
+
+        h2 {
+          text-align: left;
+          margin: initial;
+          padding: 0 0 2rem;
+          font-size: $font-size-3xlarge;
+          line-height: initial;
+
+          @media (max-width: 991px) {
+            font-size: $font-size-xlarge;
+            max-width: 100%;
+          }
+
+          &::after {
+            display: block;
+            content: "";
+            height: 1px;
+            width: 75px;
+            margin-top: 2rem;
+            border-bottom: 1px solid $green-1;
+          }
+        }
+
+        p {
+          text-align: left;
+          //font-family: $nunito-italic;
+          font-family: $nunito;
+          font-style: italic;
+          font-weight: 400;
+          @include color($grey-2);
+
+          @media (max-width: 991px) {
+            max-width: 100%;
+          }
+        }
+
+        span.author-name {
+          display: block;
+          margin-top: 4em;
+          @include color($grey-3);
+        }
+      }
+    }
+  }
+}

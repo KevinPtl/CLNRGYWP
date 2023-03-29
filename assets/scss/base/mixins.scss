@@ -1,0 +1,34 @@
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transition($transition) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin box-sizing($box-sizing) {
+  -webkit-box-sizing: $box-sizing;
+  -moz-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+}
+
+@mixin color($color) {
+  color: $color;
+  -webkit-text-fill-color: $color;
+}
+
+@mixin inset-position($top, $right, $bottom, $left) {
+  inset: $top $right $bottom $left;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

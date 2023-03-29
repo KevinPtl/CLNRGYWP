@@ -1,0 +1,64 @@
+// Third party
+@import "./../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Base
+@import "./abstracts/vars.scss";
+@import "./base/reset.scss";
+@import "./base/mixins.scss";
+@import "./base/typography.scss";
+@import "./base/animate.scss";
+@import "./base/fonts.scss";
+
+// Components - Controls
+@import "./components/controls/link.scss";
+@import "./components/controls/button.scss";
+@import "./components/controls/input.scss";
+
+// Components - Article
+@import "./components/article/post.scss";
+
+// Components - Shared
+@import "./components/shared/cta.scss";
+
+// Modules - Home
+@import "./modules/home/hero.scss";
+@import "./modules/home/about.scss";
+@import "./modules/home/services.scss";
+@import "./modules/home/blogs.scss";
+@import "./modules/home/testimonials.scss";
+
+// Modules - Services
+@import "./modules/services/banner.scss";
+@import "./modules/services/about.scss";
+@import "./modules/services/steps.scss";
+@import "./modules/services/benefits.scss";
+@import "./modules/services/blogs.scss";
+@import "./modules/services/others.scss";
+
+// Modules - Contact
+@import "./modules/contact/container.scss";
+@import "./modules/contact/form.scss";
+@import "./modules/contact/info.scss";
+
+// Modules - About
+@import "./modules/about/section.scss";
+
+// Modules - Blog
+@import "./modules/blog/home.scss";
+@import "./modules/blog/banner.scss";
+@import "./modules/blog/article.scss";
+
+// Layout
+@import "./layout/header.scss";
+@import "./layout/search.scss";
+@import "./layout/layout.scss";
+@import "./layout/footer.scss";
+
+#trp-floater-ls {
+  display: none !important;
+}
+
+// To remove once the blog is done
+section.coming-soon {
+  display: flex;
+}

@@ -1,0 +1,117 @@
+@import "./../abstracts/vars.scss";
+@import "./../base/mixins.scss";
+
+footer#main-footer {
+  background-color: $blue-0;
+
+  .wrapper {
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 40px;
+      grid-template-areas:
+        "left middle right"
+        ". social .";
+      place-content: center;
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      padding: 7rem 2rem;
+      @include box-sizing(border-box);
+
+      @media (max-width: $lg-screen-min) {
+        padding: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "middle"
+          "left"
+          "right"
+          "social";
+      }
+
+      ul {
+        grid-area: social;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: $lg-screen-min) {
+          justify-content: space-around;
+        }
+
+        &#left-side-footer {
+          grid-area: left;
+        }
+        &#right-side-footer {
+          grid-area: right;
+        }
+
+        li {
+          margin-bottom: 4rem;
+
+          @media (max-width: $lg-screen-min) {
+            margin-bottom: 0;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a,
+          span {
+            @include color($white-0);
+            text-transform: uppercase;
+            margin: 0.5rem;
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
+
+          span {
+            //font-family: $nunito-bold;
+            font-family: $nunito;
+            font-weight: 700;
+          }
+        }
+      }
+
+      ul.social-media-list {
+        grid-area: social;
+        flex-direction: row;
+        justify-content: center;
+
+        @media (max-width: $lg-screen-min) {
+          align-items: flex-end;
+        }
+
+        li {
+          margin-bottom: 0;
+
+          a:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      a#footer-logo {
+        grid-area: middle;
+        justify-content: center;
+        margin-bottom: 4rem;
+        align-items: baseline;
+
+        img {
+          width: 200px;
+        }
+      }
+    }
+
+    .bottom {
+      padding: 2rem 4rem;
+      text-align: center;
+      background-color: $white-0;
+      @include box-sizing(border-bottom);
+    }
+  }
+}

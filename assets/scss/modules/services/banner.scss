@@ -1,0 +1,71 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+section.banner-service {
+  position: relative;
+  display: flex;
+  height: 75vh;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    height: 150vh;
+  }
+
+  picture {
+    &::before {
+      content: "";
+      display: block;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: linear-gradient(
+        135deg,
+        rgba(0, 100, 149, 1) 0,
+        rgba(0, 0, 0, 1) 100%
+      ) !important;
+      opacity: 0.9;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    margin: 18rem 0;
+
+    img {
+      width: 100px;
+      fill: $white-0;
+    }
+
+    h2 {
+      @include color($white-0);
+      font-size: $font-size-6xlarge;
+
+      @media (max-width: $md-screen-min) {
+        font-size: $font-size-4xlarge;
+      }
+    }
+
+    h6 {
+      @include color($green-2);
+      margin-top: 1.5rem;
+      text-align: center;
+
+      @media (max-width: $md-screen-min) {
+        font-size: $font-size-medium;
+        max-width: 320px;
+      }
+    }
+  }
+}

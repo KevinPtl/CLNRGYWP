@@ -1,0 +1,89 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+section.about-sections {
+  display: flex;
+  justify-content: center;
+
+  &:nth-child(even) {
+    background-color: $white-3;
+    padding: 2rem;
+    @include box-sizing(border-box);
+
+    @media (max-width: 991px) {
+      padding: 2rem 0;
+    }
+  }
+
+  @media (max-width: 991px) {
+    height: initial;
+  }
+
+  .content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    max-width: 1200px;
+    overflow: hidden;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      justify-content: center;
+      max-width: $lg-screen-min;
+
+      &.reverse {
+        flex-direction: column;
+      }
+    }
+
+    .left {
+      position: relative;
+      flex: 1 0 500px;
+
+      @media (max-width: 991px) {
+        flex: 1;
+        max-width: 500px;
+      }
+
+      picture {
+        display: block;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 2rem;
+      @include box-sizing(border-box);
+
+      @media (max-width: 991px) {
+        padding: 2rem;
+      }
+
+      h2 {
+        margin-bottom: 2rem;
+        @include color($blue-0);
+
+        @media (max-width: $xl-screen-min) {
+          font-size: $font-size-3xlarge;
+        }
+
+        @media (max-width: $md-screen-min) {
+          font-size: $font-size-2xlarge;
+        }
+      }
+    }
+  }
+}

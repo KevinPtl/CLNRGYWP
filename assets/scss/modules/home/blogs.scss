@@ -1,0 +1,81 @@
+@import "./../../abstracts/vars.scss";
+@import "./../../base/mixins.scss";
+
+// TODO:: Make a reusable article section component
+section.blogs {
+  padding: 0 1rem 10rem;
+  @include box-sizing(border-box);
+
+  @media (max-width: $lg-screen-min) {
+    padding: 0 1rem 2rem;
+  }
+
+  h2 {
+    //font-family: $nunito-extrabold;
+    font-family: $nunito;
+    font-weight: 800;
+    text-align: center;
+    padding: 6rem 0;
+    @include color($blue-0);
+    @include box-sizing(border-box);
+
+    @media (max-width: $lg-screen-min) {
+      padding: 3rem 0;
+      font-size: $font-size-2xlarge;
+    }
+  }
+
+  .content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+    flex-wrap: wrap;
+
+    @media (max-width: $lg-screen-min) {
+      margin: 0 auto 2.5rem;
+    }
+
+    article {
+      flex: 1 0 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+
+      @media (max-width: $lg-screen-min) {
+        &.post {
+          margin-bottom: 2rem;
+        }
+      }
+
+      @media (max-width: $lg-screen-min) {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+
+      &:nth-child(even) {
+        margin-left: 1rem;
+
+        @media (max-width: $lg-screen-min) {
+          margin-left: 0;
+        }
+      }
+
+      &:nth-child(odd) {
+        margin-right: 1rem;
+
+        @media (max-width: $lg-screen-min) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .more-blogs {
+    display: flex;
+    justify-content: center;
+
+    a[role="button"] {
+      text-transform: initial;
+      width: 220px;
+    }
+  }
+}
