@@ -5,7 +5,7 @@
 <section class="about">
     <div class="content">
         <div class="left">
-            <h2>À propos de <span>Cleanergy</span></h2>
+            <h2>À propos de <span>CLNRGY</span></h2>
             <p>
             Chez CLNRGY, nous sommes fiers d'offrir plusieurs types de services entièrement personnalisés à la suite d'une évaluation complète de votre situation. Pour débuter, le service de planification de supplémentation vous permettra de rehausser différentes fonctions métaboliques. Ensuite, nous vous offrons un service d'élaboration de plan d'entraînement ainsi que des sessions d'entraînement en personne ou à distance. Finalement, nous offrons un service de haut niveau concernant la prise de décisions orientées par rapport à votre nutrition. CLNRGY vise à rehausser les standards en matière de services dans l'industrie de l'entraînement et de la supplémentation. Notre mission est claire : s'adapter à tous les types de clientèles qui décideront de nous faire confiance pour permettre à chacun de vivre des résultats inégalés. C'est le but ultime de CLNRGY !
             </p>

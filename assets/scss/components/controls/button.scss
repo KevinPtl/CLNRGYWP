@@ -51,4 +51,18 @@ a[role="button"] {
       @include color($white-0);
     }
   }
+
+  &.tertiary {
+    border: 1px solid $green-0;
+    background-color: $green-0;
+    @include color($white-0);
+
+    @include transition(background-color 0.2s ease-out);
+
+    &:hover {
+      border: 1px solid $green-0;
+      background-color: $white-0;
+      @include color($green-0);
+    }
+  }
 }

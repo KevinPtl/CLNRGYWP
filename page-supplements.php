@@ -2,10 +2,11 @@
     <main>
         <?php 
             $webp_image_data = get_field('banner_image_webp');
-            $fallback_image_data = get_field('banner_image_jpg');
+            $fallback_image_data = get_field('banner_image_fallback');
 
             get_template_part('templates/services/banner', null, array(
                 "title" => "Suppléments",
+                "title-classes" => "",
                 "subtitle" => "Combler les lacunes de votre plan alimentaire",
                 "background" => array(
                     "webp" => $webp_image_data['sizes']['page-banner'],

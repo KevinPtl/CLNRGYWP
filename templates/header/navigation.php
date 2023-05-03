@@ -1,7 +1,8 @@
 <nav id="main-nav">
     <ul id="main-nav-list">
-        <li><a id="nav-link-home" <?php if(is_page('home')) echo 'class="active"'?> href="<?php echo site_url('/') ?>">Accueil</a></li>
         <li><a id="nav-link-about-us" <?php if(is_page('a-propos')) echo 'class="active"'?> href="<?php echo site_url('/a-propos') ?>">À propos</a></li>
+        <li><a id="nav-link-success-stories" <?php if(is_page('resultats')) echo 'class="active"'?> href="<?php echo site_url('/resultats') ?>">Les résultats</a></li>
+        <!-- <li><a id="nav-link-home" <?php if(is_page('home')) echo 'class="active"'?> href="<?php echo site_url('/') ?>">Accueil</a></li> -->
         <li class="has-sub-menu" id="service-sub-menu">
             <a <?php if(is_page('supplements') || is_page('nutrition') || is_page('entrainement')) echo 'class="active"'?> href="#">
                 Services

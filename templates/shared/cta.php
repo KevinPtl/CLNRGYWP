@@ -9,7 +9,11 @@
     <div class="content">
         <div class="wrapper">
             <h2><?php echo $args["title"] ?></h2>
-            <a href="<?php echo site_url($args["buttonLink"]) ?>" role="button" class="primary"><?php echo $args["buttonText"] ?></a>
+            <?php if ($args["isExternalLink"]) { ?>
+                <a href="<?php echo $args["buttonLink"] ?>" target="_blank" role="button" class="primary"><?php echo $args["buttonText"] ?></a>
+            <?php } else { ?>
+                <a href="<?php echo site_url($args["buttonLink"]) ?>" role="button" class="primary"><?php echo $args["buttonText"] ?></a>
+            <?php }?>
         </div>
     </div>
 </section>

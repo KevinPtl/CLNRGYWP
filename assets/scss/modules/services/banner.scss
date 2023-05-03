@@ -54,6 +54,10 @@ section.banner-service {
 
       @media (max-width: $md-screen-min) {
         font-size: $font-size-4xlarge;
+
+        &.long-title {
+          font-size: $font-size-3xlarge;
+        }
       }
     }
 

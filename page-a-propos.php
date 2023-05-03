@@ -9,8 +9,9 @@
                 "alt" => "Transformez votre santé avec CLNRGY et son expert en préparation physique Nicholas Raymond-Giasson"
             ),
             "title" => "Commencez votre parcours de santé maintenant!",
-            "buttonText" => "Contactez nous",
-            "buttonLink" =>  "/contact"
+            "buttonText" => "Prendre rendez-vous",
+            "buttonLink" =>  "https://calendly.com/nicholas-raymondgiasson/consultation",
+            "isExternalLink" => true
         )) ?>
         
     </main>

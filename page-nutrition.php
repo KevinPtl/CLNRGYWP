@@ -6,6 +6,7 @@
 
             get_template_part('templates/services/banner', null, array(
                 "title" => "Nutrition",
+                "title-classes" => "",
                 "subtitle" => "Décisions nutritionelles orientées",
                 "background" => array(
                     "webp" => $webp_image_data['sizes']['page-banner'],

@@ -8,7 +8,7 @@
     </picture>
     <div class="content fade-in">
         <img src="<?php echo $args['icon_svg'] ?>" alt="">
-        <h2><?php echo $args['title']; ?></h2>
+        <h2 class="<?php echo $args['title-classes'] ?>"><?php echo $args['title']; ?></h2>
         <h6><?php echo $args['subtitle']; ?></h6>
     </div>
 </section>

@@ -249,6 +249,23 @@ a[role="button"] {
       background-color: #10344c;
       color: #ffffff;
       -webkit-text-fill-color: #ffffff; }
+  button.tertiary,
+  a[role="button"].tertiary {
+    border: 1px solid #749325;
+    background-color: #749325;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -ms-transition: background-color 0.2s ease-out;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    button.tertiary:hover,
+    a[role="button"].tertiary:hover {
+      border: 1px solid #749325;
+      background-color: #ffffff;
+      color: #749325;
+      -webkit-text-fill-color: #749325; }
 
 .input-container.error input,
 .input-container.error textarea {
@@ -430,7 +447,7 @@ section.cta {
         section.cta .content .wrapper {
           padding: 2rem; } }
       section.cta .content .wrapper a[role="button"] {
-        width: 220px; }
+        width: 250px; }
       section.cta .content .wrapper h2 {
         text-transform: initial;
         color: #10344c;
@@ -449,6 +466,9 @@ section.cta {
   @media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
     .hero {
       height: 150vh; } }
+  @media (max-width: 600px) {
+    .hero {
+      height: 100vh; } }
   .hero .content {
     position: relative;
     display: flex;
@@ -465,7 +485,11 @@ section.cta {
       .hero .content {
         padding: 10rem 0; } }
     .hero .content .hero-text {
+      flex: 2;
       z-index: 1; }
+      @media (max-width: 991px) {
+        .hero .content .hero-text {
+          flex: initial; } }
       .hero .content .hero-text hgroup h3 {
         margin-bottom: 1rem;
         color: #a2cc4c;
@@ -479,32 +503,64 @@ section.cta {
             font-size: 2.2rem;
             line-height: 2.2rem; } }
       .hero .content .hero-text hgroup h1 {
+        font-size: 7.4rem;
+        line-height: 7.4rem;
         color: #1a1c1e;
         -webkit-text-fill-color: #1a1c1e; }
         @media (max-width: 1280px) {
           .hero .content .hero-text hgroup h1 {
-            font-size: 7.4rem;
-            line-height: 7.4rem; } }
-        @media (max-width: 991px) {
-          .hero .content .hero-text hgroup h1 {
             font-size: 6.4rem;
             line-height: 6.4rem; } }
+        @media (max-width: 1100px) {
+          .hero .content .hero-text hgroup h1 {
+            font-size: 5.4rem;
+            line-height: 5.4rem; } }
         @media (max-width: 600px) {
           .hero .content .hero-text hgroup h1 {
             font-size: 4.4rem;
             line-height: 4.4rem; } }
-      .hero .content .hero-text a[role="button"] {
-        width: 220px;
-        font-family: "Nunito";
-        font-weight: 700;
-        margin: 2rem 0; }
+      .hero .content .hero-text p {
+        line-height: normal;
+        font-size: 1.8rem;
+        margin: 1rem 0; }
+      .hero .content .hero-text .button-container {
+        display: flex;
+        flex-wrap: wrap; }
+        @media (max-width: 600px) {
+          .hero .content .hero-text .button-container {
+            display: block;
+            margin: 2rem 0 0; } }
+        .hero .content .hero-text .button-container a[role="button"] {
+          width: auto;
+          max-width: 250px;
+          font-family: "Nunito";
+          font-weight: 700;
+          margin: 2rem 20px 0 0; }
+          @media (max-width: 600px) {
+            .hero .content .hero-text .button-container a[role="button"] {
+              margin: 1rem 0 0; } }
     .hero .content picture {
-      position: absolute; }
+      flex: 2; }
       @media (max-width: 991px) {
         .hero .content picture {
-          height: 100%; } }
+          flex: initial; } }
+      @media (max-width: 991px) {
+        .hero .content picture {
+          position: absolute;
+          right: -450px;
+          height: 100%;
+          width: 900px; } }
+      @media (max-width: 600px) {
+        .hero .content picture {
+          position: absolute;
+          right: -300px;
+          height: 100%;
+          width: 600px; } }
       .hero .content picture img {
-        width: 108%; }
+        width: 100%; }
+        @media (max-width: 991px) {
+          .hero .content picture img {
+            width: initial; } }
         @media (max-width: 991px) {
           .hero .content picture img {
             display: flex;
@@ -768,6 +824,30 @@ section.testimonials h2 {
     color: #a2cc4c;
     -webkit-text-fill-color: #a2cc4c; }
 
+section.testimonials .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: auto; }
+  section.testimonials .content .video-container {
+    margin: 1rem; }
+    section.testimonials .content .video-container iframe {
+      width: 500px;
+      height: 300px; }
+      @media (max-width: 1024px) {
+        section.testimonials .content .video-container iframe {
+          width: 400px;
+          height: 300px; } }
+      @media (max-width: 768px) {
+        section.testimonials .content .video-container iframe {
+          width: 320px;
+          height: 300px; } }
+      @media (max-width: 600px) {
+        section.testimonials .content .video-container iframe {
+          width: 100%;
+          height: 200px; } }
+
 section.testimonials .wrapper.testimonial-slider {
   position: relative;
   overflow-x: hidden;
@@ -957,7 +1037,9 @@ section.banner-service {
       font-size: 6.4rem; }
       @media (max-width: 600px) {
         section.banner-service .content h2 {
-          font-size: 4.4rem; } }
+          font-size: 4.4rem; }
+          section.banner-service .content h2.long-title {
+            font-size: 3.2rem; } }
     section.banner-service .content h6 {
       color: #c4f353;
       -webkit-text-fill-color: #c4f353;
