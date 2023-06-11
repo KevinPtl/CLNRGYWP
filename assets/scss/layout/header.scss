@@ -19,10 +19,6 @@ header#main-header {
     padding: 1.5rem;
   }
 
-  &.blog-header {
-    background-color: $blue-0;
-  }
-
   &.sticky {
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -36,7 +32,7 @@ header#main-header {
     }
   }
 
-  &.open .wrapper .overlay {
+  &.open .wrapper .overlay#menu-overlay {
     @media (max-width: 991px) {
       display: block;
     }
@@ -44,78 +40,23 @@ header#main-header {
 
   .wrapper {
     display: grid;
-    grid-template-columns: 170px 2fr;
+    grid-template-columns: 170px 2fr 170px;
     place-items: center;
     max-width: 1400px;
     width: 100%;
     margin: auto;
 
-    &.blog-wrapper {
-      max-width: 1200px;
+    @media (max-width: 1430px) {
+      grid-template-columns: 170px 2fr 80px;
+    }
+
+    @media (max-width: 991px) {
+      grid-template-columns: 170px 2fr;
     }
 
     a#logo {
       img {
         width: 100%;
-      }
-    }
-
-    button.search-button,
-    button.menu-button {
-      display: flex;
-      justify-self: flex-end;
-      background-color: transparent;
-      border: none;
-      padding: 0;
-      width: 40px;
-      height: 40px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    button.search-button {
-      @include color($white-0);
-
-      &:hover {
-        @include color($green-0);
-      }
-
-      span {
-        display: flex;
-        width: 40px;
-        height: 40px;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-
-    button.menu-button {
-      display: none;
-      @include color($blue-0);
-
-      @media (max-width: 991px) {
-        display: flex;
-
-        &.menu-open div {
-          left: -40px;
-        }
-
-        div {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: absolute;
-          left: 0;
-          @include transition(left 0.3s ease);
-
-          span {
-            display: flex;
-            width: 40px;
-            height: 40px;
-            align-items: center;
-            justify-content: center;
-          }
-        }
       }
     }
 
@@ -129,36 +70,14 @@ header#main-header {
       @include inset-position(0, 0, 0, 0);
     }
 
-    .search-overlay {
-      position: fixed;
-      z-index: -1;
-      overflow-y: auto;
-      background-color: rgba(255, 255, 255, 0.98);
-      transform: scale(1.09);
-      transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
-      overflow-x: hidden;
-      visibility: hidden;
-      opacity: 0;
-      @include inset-position(0, 0, 0, 0);
-      @include box-sizing(border-box);
-
-      &.active {
-        visibility: visible;
-        opacity: 1;
-        transform: scale(1);
-        z-index: 3;
-      }
-    }
-
-    aside {
+    aside#navigation-menu {
       display: grid;
-      grid-template-columns: 1fr 170px;
+      grid-template-columns: 1fr;
       width: 100%;
       align-items: center;
 
       @media (max-width: 991px) {
         position: fixed;
-        grid-template-columns: 1fr;
         grid-template-rows: 1fr 80px;
         height: 100%;
         background: $white-0;
@@ -327,36 +246,11 @@ header#main-header {
           }
         }
       }
-
-      ul.social-media-list li.communication {
-        display: none;
-
-        @media (max-width: 991px) {
-          display: initial;
-        }
-      }
-    }
-
-    .buttons {
-      display: flex;
-      width: 100%;
-      justify-content: flex-end;
-      align-items: center;
-
-      a {
-        @include color($white-0);
-        margin-right: 1rem;
-        font-weight: 700;
-        font-size: $font-size-medium;
-
-        &:hover {
-          @include color($green-0);
-        }
-      }
     }
   }
 }
 
+// Social media list
 ul.social-media-list {
   display: flex;
 

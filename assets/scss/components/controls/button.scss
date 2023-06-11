@@ -2,7 +2,8 @@
 @import "./../../base/mixins.scss";
 
 button,
-a[role="button"] {
+a[role="button"],
+input[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,6 +64,63 @@ a[role="button"] {
       border: 1px solid $green-0;
       background-color: $white-0;
       @include color($green-0);
+    }
+  }
+
+  &.quaternary {
+    position: relative;
+    border: none;
+    background-color: $white-0;
+    @include color($blue-0);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      left: 0;
+      border-radius: 40px;
+      border: 1px solid transparent;
+      background-color: $green-4;
+
+      @media (max-width: $xl-screen-min) {
+        //width: 100%;
+        //height: 40px;
+      }
+    }
+
+    span {
+      z-index: 1;
+
+      &.icon-space {
+        margin-right: 0.5rem;
+      }
+
+      &.spinner-icon {
+        display: none;
+        margin-left: 0.5rem;
+      }
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+        @include transition(all 0.2s ease);
+      }
+    }
+
+    &.hovered {
+      &::before {
+        width: 100%;
+        @include transition(all 0.2s ease);
+      }
+
+      &:hover {
+        &::before {
+          border: 1px solid $green-4;
+          background-color: $white-0;
+        }
+      }
     }
   }
 }

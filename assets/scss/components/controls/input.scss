@@ -4,7 +4,8 @@
 .input-container {
   &.error {
     input,
-    textarea {
+    textarea,
+    select {
       border: 1px solid #e54545e0;
     }
 
@@ -21,20 +22,28 @@ label {
   font-size: $font-size-xsmall;
 }
 
-input {
+input,
+select {
   width: 100%;
   height: 40px;
   padding: 0.75rem;
-  border: 1px solid $grey-1;
+  border: 1px solid $white-4;
   border-radius: 0.25rem;
   outline: 0;
   @include box-sizing(border-box);
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
 textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid $grey-1;
+  border: 1px solid $white-4;
   border-radius: 0.25rem;
   outline: 0;
   resize: vertical;
@@ -58,4 +67,16 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

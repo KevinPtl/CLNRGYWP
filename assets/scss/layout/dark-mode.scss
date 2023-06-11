@@ -1,0 +1,50 @@
+@import "./../abstracts/vars.scss";
+@import "./../base/mixins.scss";
+
+// Handle dark mode header for blog
+header#main-header.dark-mode {
+  background-color: $blue-0;
+
+  &.open .header-widgets.dark-mode button.widget-button,
+  .wrapper aside#navigation-menu.open nav ul#main-nav-list li a {
+    @include color($blue-0);
+
+    &:hover,
+    &.active {
+      @include color($green-0);
+    }
+  }
+
+  .wrapper aside#navigation-menu nav ul#main-nav-list li a {
+    @include color($white-0);
+
+    &:hover,
+    &.active {
+      @include color($green-3);
+    }
+  }
+
+  ul.header-widgets.dark-mode button.widget-button {
+    @include color($white-0);
+
+    &:hover {
+      @include color($green-3);
+    }
+  }
+}
+
+ul.header-widgets.dark-mode {
+  background-color: $blue-0;
+
+  h5 {
+    @include color($white-0);
+  }
+
+  button.widget-button {
+    @include color($white-0);
+
+    &:hover {
+      @include color($green-3);
+    }
+  }
+}

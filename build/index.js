@@ -527,6 +527,12 @@ class Header {
   constructor() {
     this.header = document.getElementById("main-header");
     this.serviceSubMenu = document.getElementById("service-sub-menu");
+    this.shopSubMenu = document.getElementById("shop-sub-menu");
+
+    // Check the value of the query parameter and add a class to the element
+    // if (queryParamValue === "shipping") {
+    // }
+
     document.addEventListener("scroll", () => {
       if (window.scrollY >= 50 || window.pageXOffset >= 50) {
         this.header.classList.add("active");
@@ -537,6 +543,11 @@ class Header {
     if (this.serviceSubMenu) {
       this.serviceSubMenu.addEventListener("click", event => {
         this.serviceSubMenu.classList.toggle("active");
+      });
+    }
+    if (this.shopSubMenu) {
+      this.shopSubMenu.addEventListener("click", event => {
+        this.shopSubMenu.classList.toggle("active");
       });
     }
   }
@@ -561,15 +572,27 @@ class MobileMenu {
     this.header = document.getElementById("main-header");
     this.menuButton = document.getElementById("open-menu-btn");
     this.mobileMenu = document.getElementById("navigation-menu");
+    this.cartButton = document.getElementById("open-cart-btn");
+    this.cartMenu = document.getElementById("cart-menu");
     this.menuOverlay = document.getElementById("menu-overlay");
+    this.cartOverlay = document.getElementById("cart-overlay");
     this.events();
   }
   events() {
+    // Mobile Menu Handlers
     if (this.menuButton) {
       this.menuButton.addEventListener("click", this.toggleMenu.bind(this));
     }
     if (this.menuOverlay) {
       this.menuOverlay.addEventListener("click", this.toggleMenu.bind(this));
+    }
+
+    // Cart Event Handlers
+    if (this.cartButton) {
+      this.cartButton.addEventListener("click", this.toggleCart.bind(this));
+    }
+    if (this.cartOverlay) {
+      this.cartOverlay.addEventListener("click", this.toggleCart.bind(this));
     }
   }
   toggleMenu() {
@@ -577,6 +600,12 @@ class MobileMenu {
     this.mobileMenu.classList.toggle("open");
     this.header.classList.toggle("open");
     this.body.classList.toggle("menu-open");
+  }
+  toggleCart() {
+    this.cartButton.classList.toggle("cart-open");
+    this.cartMenu.classList.toggle("open");
+    this.header.classList.toggle("cart-open");
+    this.body.classList.toggle("cart-open");
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MobileMenu);

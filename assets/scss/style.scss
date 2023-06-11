@@ -19,6 +19,7 @@
 
 // Components - Shared
 @import "./components/shared/cta.scss";
+@import "./components/shared/widgets.scss";
 
 // Modules - Home
 @import "./modules/home/hero.scss";
@@ -56,12 +57,8 @@
 @import "./layout/search.scss";
 @import "./layout/layout.scss";
 @import "./layout/footer.scss";
+@import "./layout/dark-mode.scss";
 
 #trp-floater-ls {
   display: none !important;
-}
-
-// To remove once the blog is done
-section.coming-soon {
-  display: flex;
 }

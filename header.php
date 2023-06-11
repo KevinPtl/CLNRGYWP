@@ -19,9 +19,21 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <?php 
-        if (get_post_type() == "post") { 
-            get_template_part('templates/header/blog');
-        } else { 
-            get_template_part('templates/header/main');
-        } 
+        // Default
+        $headerConfig = array(
+            'isHeaderSticky' => false,
+            'isDarkMode' => false,
+            'showMainNav' => true
+        );
+
+        // Blog
+        if (get_post_type() == "post") {
+            $headerConfig = array(
+                'isHeaderSticky' => true,
+                'isDarkMode' => true,
+                'showMainNav' => true
+            );
+        }
+        
+        get_template_part('templates/header/main', null, $headerConfig);
     ?>
